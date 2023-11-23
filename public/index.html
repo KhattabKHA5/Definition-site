@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylish Buttons</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; /* توسيع الزر بشكل أفضل في العرض */
+      height: 100vh;
+      margin: 0;
+      background-image: url('bga.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 20px;
+    }
+
+    .corner-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+      background-image: url('corn.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 20px;
+      align-self: center; /* تحديد موقع الصورة في الوسط */
+    }
+
+    button {
+      font-size: 14px; /* تقليل حجم الخط */
+      padding: 20px; /* تقليل طول الأزرار */
+      margin-bottom: 20px; /* تقليل المسافة بين الأزرار */
+      cursor: pointer;
+      border: none;
+      border-radius: 15px; /* جعل حواف الأزرار دائرية */
+      background-color: #fff;
+      color: #000;
+      width: 350px;
+    }
+
+    button:hover {
+      background-color: #00ff99;
+    }
+
+    .about-me-content {
+      display: none;
+      max-width: 600px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+  <div class="corner-image"></div>
+  <button onclick="window.location.href='https://youtube.com/@-abodby?si=u1PKa9VnuzWm3OL-'">YouTube</button>
+  <button onclick="window.location.href='https://www.instagram.com/abodb.y/?igshid=ZjA0NjI3M2I%3D'">Instagram</button>
+  <button onclick="window.location.href='https://twitter.com'">Twitter</button>
+  <button onclick="window.location.href='https://t.me'">Telegram</button>
+  <button onclick="window.location.href='https://github.com'">GitHub</button>
+  <button id="aboutMeBtn">About Me</button>
+
+  <div id="aboutMeContent" class="about-me-content">
+    <p>Name:Abood Bani Yaseen</p>
+    <p>Nickname:اوف منك</p>
+    <p>Age:23</p>
+    <p>From:Jordan🇯🇴</p>
+    <p>have:1.8m in youtube</p>
+    <p>have:194k in instgram</p>
+    <p>playing:Free Fire</p>
+    <p>The abood bani yaseen</p>
+    <button id="backBtn">الرجوع</button>
+  </div>
+
+  <script>
+    document.getElementById('aboutMeBtn').addEventListener('click', function() {
+      document.getElementById('aboutMeContent').style.display = 'block';
+    });
+
+    document.getElementById('backBtn').addEventListener('click', function() {
+      document.getElementById('aboutMeContent').style.display = 'none';
+    });
+  </script>
+</body>
+</html>
